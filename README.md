@@ -2,19 +2,32 @@
 
 This project is the ESPA website implemented with angular.js, bootstrap 3, and Docker.  It relies on the espa-api to interact with user orders and information.
 
-## Building the image
-If you have Docker installed, simply execute the following commands to get the website up and running.
+### Clone this repository
+`git clone https://github.com/dhill-usgs/espa-web.git .`
 
-* `docker build -t espa-apache2 .`
-* `docker run -it --rm --name espa-website espa-apache2`
+### Build the Docker image
+`docker build -t espa-apache2 .`
 
-`bin/run_dev.sh` will do this for you.
+### Run the Docker container
+`docker run -it --rm -p 8888:80 --name espa-website espa-apache2`
 
-Alternatively, you can run the docker container as a daemon, keeping it in the background.
-* `docker run -it -d --name espa-website espa-apache2`
+or alternatively as a daemon:
+`docker run -it -d -p 8888:80 --name espa-website espa-apache2`
 
-`bin/run_daemon.sh` is also available.
+### Browser to http://localhost:8888
 
-Once the container is launched, open a browser and point to http://localhost:8888
+### Notes
+`bin/run_dev.sh` and `bin/run_daemon.sh` will handle building and running the docker images for you.
+
+If you started the container as a daemon, you can interact with it:
+
+View logs: `docker logs espa-website`
+
+Connect via terminal: `docker exec -it 'espa-website' bash`
+
+Stop the container: `docker stop espa-website`
+
+And verify it is stopped: `docker ps`
+
 
 

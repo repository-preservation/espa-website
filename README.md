@@ -7,6 +7,7 @@ Visit `https://www.docker.com/`
 
 ### Clone this repository
 `git clone https://github.com/dhill-usgs/espa-web.git espa-web`
+
 `cd espa-web`
 
 ### Build the Docker image

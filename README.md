@@ -16,7 +16,8 @@ or alternatively as a daemon:
 
 `docker run -it -d -p 8888:80 --name espa-website espa-apache2`
 
-### Browser to http://localhost:8888
+### View the site
+Open `http://localhost:8888` in a browser
 
 ### Notes
 `bin/run_dev.sh` and `bin/run_daemon.sh` will handle building and running the docker images for you.

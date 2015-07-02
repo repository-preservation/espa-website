@@ -27,7 +27,7 @@ To run in production as a daemon:
 Open `http://localhost:8888` in a browser
 
 ### Notes
-`run_dev.sh` and `run_daemon.sh` will handle building and running the docker images for you.
+`bin/run_dev.sh` and `bin/run_daemon.sh` will handle building and running the docker images for you.
 
 If you started the container as a daemon, you can interact with it:
 
@@ -38,6 +38,15 @@ Connect via terminal: `docker exec -it 'espa-website' bash`
 Stop the container: `docker stop espa-website`
 
 And verify it is stopped: `docker ps`
+
+Start it again: `docker start espa-website`
+
+Or remove it and start fresh: `docker rm espa-website`
+
+And finally delete the image from your machine: `docker rmi espa-apache2`
+
+
+
 
 
 

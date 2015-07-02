@@ -1,8 +1,10 @@
-!#/usr/bin/env bash
+#!/usr/bin/env bash
 
-echo "Building image...\n"
+cd ../
+
+echo "Building image..."
 docker build -t espa-apache2 .
 
-echo "Running container...\n"
+echo "Running container..."
 docker run -itd -p 8888:80 --name espa-website espa-apache2
 

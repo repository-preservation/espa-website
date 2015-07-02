@@ -12,14 +12,14 @@ Visit `https://www.docker.com/`
 ### Build the Docker image
 `docker build -t espa-apache2 .`
 
-### Run the Docker container in development mode
+### Run the Docker container (development mode)
 `docker run -it --rm -p 8888:80 -v $PWD/htdocs:/usr/local/apache/htdocs --name espa-website espa-apache2`
 
 This will allow you to continue working on the site in htdocs without rebuilding the image.
 
 Just be sure to commit any changes before going into production!
 
-To run in production as a daemon:
+### Run the Docker container (operational mode)
 
 `docker run -it -d -p 8888:80 --name espa-website espa-apache2`
 

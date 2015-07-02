@@ -15,4 +15,6 @@ Alternatively, you can run the docker container as a daemon, keeping it in the b
 
 `bin/run_daemon.sh` is also available.
 
+Once the container is launched, open a browser and point to http://localhost:8888
+
 

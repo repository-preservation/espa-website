@@ -1,0 +1,24 @@
+/* These three are to pin the footer at the bottom of the window but not 
+have it fixed there */
+html{position:relative; min-height: 100% }
+body { margin-bottom:100px;}
+#footer{height: 100px; width:100%; position: absolute; left: 0; bottom: 0;}
+
+#header {height:71px; margin-bottom:0px;overflow:hidden;}
+/*#usgstitle {position:absolute; left:0; top:71px; z-index:3000;
+              background:#222; width:100%; 
+              color:#ffffff; font-weight:bold; padding-top:4px;}*/
+
+#usgsidentifier {position:absolute; left:0; top:0; z-index:3000;}
+#identifierbg {position:absolute; left:0; top:0; z-index:2900;}
+#rot {overflow:hidden; position:absolute; left:0; top:0; width:100%;height:71px;z-index:1000;}
+#usgsccsabox {position:relative;z-index:3000;float:right;background-color:#222;min-height:71px;padding-left:10px;}
+#usgsccsabox a{color:white;}
+#usgsccsabox table {margin-top:5px; margin-right:5px; font: Verdana, Arial, Helvetica, sans-serif;}
+#usgsccsabox a {text-decoration:none}
+#usgsccsabox a:hover {text-decoration:underline}
+
+#usgstitle { color:#ffffff; font-weight:bold;
+             padding-top:4px; padding-left:10px;
+             height:30px; background-color:#000;}
+

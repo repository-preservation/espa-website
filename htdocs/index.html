@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='espaApp'>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>EROS Science Processing Architecture</title>
+
+    <!-- Bootstrap -->
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.5/spacelab/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/header-footer.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-route.js"></script>
+    <base href="/">
+  </head>
+  <body role='document'>
+      <div id="header">
+           <div id="usgsidentifier">
+            <a href="http://www.usgs.gov/"><img src="http://espa.cr.usgs.gov/static/img/header_graphic_usgsIdentifier_white.jpg"
+                alt="USGS - science for a changing world"
+                width="178" height="72" /></a>
+           </div>
+        <div id="identifierbg">
+            <img src="http://espa.cr.usgs.gov/static/img/logo_bg.png" alt="" width="240" height="72" />
+        </div>
+        <div id="rot">
+            <img src="http://espa.cr.usgs.gov/static/img/www-banner.jpg" alt="" width="2100" height="72" />
+        </div>
+        <div id="usgsccsabox">
+            <table>
+              <tr><td><a href="http://www.usgs.gov/"><strong>USGS Home</strong></a></td></tr>
+              <tr><td><a href="http://www.usgs.gov/ask/"><strong>Contact USGS</strong></a></td></tr>
+              <tr><td><a href="http://search.usgs.gov/"><strong>Search USGS</strong></a></td></tr>
+            </table>
+        </div>
+      </div>
+    <div id="usgstitle">
+           <p>LSDS Science Research and Development (LSRD)</p>
+    </div>
+
+     <nav class="navbar navbar-inverse">
+        <div class="container">
+          <div class="navbar-header">
+
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            
+            <a class="navbar-brand" href="/home/">Eros Science Processing Architecture (ESPA)</a>
+            
+          </div>
+
+          <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li><a href="#"><span class="glyphicon glyphicon-home"></span></a></li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Products<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#orders">Availability Matrix</a></li>
+                  <li><a href="#orders">Algorithm Maturity Status</a></li>
+                  <li><a href="http://landsat.usgs.gov/documents/espa_odi_userguide.pdf">User Guide</a></li>
+                  <li><a href="http://landsat.usgs.gov/CDR_ECV.php">Product Descriptions</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li class="dropdown-header">Algorithm Documentation</li>
+                  <li><a href="#">TM & ETM+ Surface Reflectance</a></li>
+                  <li><a href="#">OLITIRS Surface Reflectance</a></li>
+                  <li><a href="#">Dynamic Surface Water Extent</a></li>
+                  <li><a href="#">Snow Covered Area</a></li>
+                  <li><a href="#">Etc</a></li>
+                </ul>
+              </li>
+
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Ordering <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href='#new_order'>Place New Order</a></li>
+                  <li><a href="#view_orders">View Orders</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li class="dropdown-header">API</li>
+                  <li><a href="#">Single Scene API</a></li>
+                  <li><a href="#">Bulk API</a></li>
+                  <li><a href="#">Documentation</a></li>
+                </ul>
+              </li>
+
+              <li class='dropdown'>
+                <a class='dropdown-toggle' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false'>System<span class='caret'></span></a>
+                <ul class='dropdown-menu'>
+                  <li><a href='#'>Overview</a></li>
+                  <li><a href='#order_fulfillment'>Orders & FulFillment</a></li>
+                  <li><a href='#'>Status</a></li>
+                  <li><a href='#'>Control</a></li>
+                  <li><a href='#'>Automated Tests</a></li>
+                </ul>
+              </li>
+
+              <li class='dropdown'>
+                <a class='dropdown-toggle' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false'>Reports<span class='caret'></span></a>
+                <ul class='dropdown-menu'>
+                  <li><a href='#'>Orders</a></li>
+                  <li><a href='#'>Users</a></li>
+                  <li><a href='#'>Latency & Throughput</a></li>
+                  <li><a href='#'>System Retries</a></li>
+                </ul>
+              </li>
+
+              <li class='dropdown'>
+                <a class='dropdown-toggle' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false'>Software & Downloads<span class='caret'></span></a>
+                <ul class='dropdown-menu'>
+                  <li><a href='http://github.com/USGS-EROS'>Github</a></li>
+                  <li><a href='#'>Bulk Download Client</a></li>
+                  <li><a href='http://espa.cr.usgs.gov/downloads/assessments/'>Cloud Cover Assessments</a></li>
+                  <li><a href='http://espa.cr.usgs.gov/downloads/auxiliaries/'>Auxillary Datasets</a></li>
+                </ul>
+              </li>
+              
+
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+
+    <div class="container" role="main">
+      <div ng-view></div>
+    </div>
+
+  <div id='footer'>
+      <nav class="navbar navbar-default">
+        <div>
+          <div class="navbar-header">
+
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            
+          </div>
+
+          <div class="navbar-collapse collapse">
+
+          <ul class='nav navbar-nav'>
+              <li><a title="Accessibility Policy (Section 508)" href="http://www.usgs.gov/laws/accessibility.html">Accessibility</a></li>
+              <li><a title="Freedom of Information Act" href="http://www.usgs.gov/foia/">FOIA</a></li>
+              <li><a title="Privacy policies of the U.S. Geological Survey." href="http://www.usgs.gov/laws/privacy.html">Privacy</a></li>
+              <li><a title="Policies and notices that govern information posted on USGS Web sites." href="http://www.usgs.gov/laws/policies_notices.html">Policies and Notices</a></li>
+          </ul>
+          <ul class='nav navbar-nav' style="float: right">
+             <li>
+                 <a href="http://usa.gov/" class='navbar-nav pull-right'>
+                     <img height="26" width="90" title="USAGov: Government Made Easy" alt="USA.gov logo" src="/assets/img/footer_graphic_usagov.jpg"/>
+                 </a>
+             </li>
+          </ul>
+         </div>
+        </div>
+      </nav>
+   
+      <a href="http://www.doi.gov/">U.S. Department of the Interior</a>
+      <span>|</span>
+      <a href="http://www.usgs.gov/">U.S. Geological Survey</a>
+      <br/>
+      URL: <span id="url">http://espa.cr.usgs.gov/</span>
+      <br/>
+      Page Contact Information:
+      <a href="mailto:custserv@usgs.gov">custserv@usgs.gov</a>
+      <br/>
+      Page Last Modified: <span id="published">June 26, 2015</span>
+      <br/><br/>          
+   </div>
+    
+</div>
+  </body>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src='./app/app.js'></script>
+    <script src='./app/controllers/main.js'></script>
+    <script src='./app/controllers/ordering.js'></script>
+</html>
+
+

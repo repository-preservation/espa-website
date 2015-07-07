@@ -22,9 +22,8 @@ body { margin-bottom:100px;}
              padding-top:4px; padding-left:10px;
              height:30px; background-color:#000;}
 
-// Drop shadows
-.box-shadow(@shadow: 0 1px 3px rgba(0,0,0,.25)) {
-  -webkit-box-shadow: @shadow;
-     -moz-box-shadow: @shadow;
-          box-shadow: @shadow;
-}
+
+.gap-top { margin-top:10px; }
+.gap-bottom { margin-bottom:10px; }
+.gap-left { margin-left:10px; }
+.gap-right { margin-right:10px; }

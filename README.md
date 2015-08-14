@@ -1,4 +1,4 @@
-# espa-web
+# espa-website
 
 This project is the ESPA website implemented with angular.js, bootstrap 3, and Docker.  It relies on the espa-api to interact with user orders and information.
 

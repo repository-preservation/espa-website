@@ -6,9 +6,9 @@ This project is the ESPA website implemented with angular.js, bootstrap 3, and D
 Visit `https://www.docker.com/`
 
 ### Clone this repository
-`git clone https://github.com/dhill-usgs/espa-web.git espa-web`
+`git clone https://github.com/USGS-EROS/espa-website.git espa-website`
 
-`cd espa-web`
+`cd espa-website`
 
 ### Build the Docker image
 `docker build -t espa-apache2 .`
